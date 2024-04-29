@@ -10,10 +10,20 @@ from uncertainties.unumpy import uarray                     # Array von Fehler: 
 from uncertainties.unumpy import (nominal_values as noms,   # Wert:             noms(fehlerwert) = x
                                   std_devs as stds)  
 
-def Blang(I,l):
-    return 12.566*10**(-7)*1*3400*I/l
 
-uI = ufloat(0.5, 0.1)
-ul = ufloat(0.102, 0.005)
+A = unp.uarray([34,34,35,35,34,34,36,34,35,33],[0,0,0,0,0,0,0,0,0,0])
 
-print(Blang(uI, ul))
+T = 10**-3
+def n(max):
+   return 1/(1-632.8*10**(-9)*A/(np.deg2rad(20)*np.deg2rad(10)*T))
+    
+def mean(x):
+    a=0
+    i=0
+    while i<10:
+        a+=x[i] 
+        i+=1
+    return a/10   
+
+print('n der Brechungsindizes',n(A))
+print('Durchschnitt der n', mean(n(A)))
