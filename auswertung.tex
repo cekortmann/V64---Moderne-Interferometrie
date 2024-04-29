@@ -64,7 +64,7 @@
 Die Anzahl der Peaks und die aus \autoref{eqn:Brechi} resultierenden Brechindizes sind in \autoref{tab:Glasn} dargestellt.
 \begin{table}
     \centering
-    \caption{Anzahl der Peaks und der daraus resultierende Brechungsindex}
+    \caption{Anzahl der Peaks und der daraus resultierende Brechungsindex.}
     \begin{tabular}{c c c}
         \toprule
         Messung & Anzahl der Minima & Brechungsindex $n$ \\
@@ -84,3 +84,55 @@ Die Anzahl der Peaks und die aus \autoref{eqn:Brechi} resultierenden Brechindize
     \label{tab:Glasn}
 \end{table}
 Der daraus resultierende Mittelwert für den Brechungsindex $n$ von Glas beträgt $n=1.556$.
+
+
+\subsection{Brechungsindex von Luft}
+\label{sec:AusLuft}
+In diesem Teil der Auswertung wird der Brechungsindex von Luft ermittelt. Die Daten der Messreihen sind in \autoref{tab:Brechung} niedergeschrieben und in \autoref{fig:allefüreinen} graphisch aufgetragen.
+\begin{table}
+    \centering
+    \caption{Messwerte zur Messung des Brechungsindex von Luft.}
+\begin{tabular}{c c c c c c c c }
+    \toprule
+    Druck $p \mathrm{/} \unit{\milli \bar}$ & Messung 1& Messung 2& Messung 3& Messung 4& Messung 5& Mittelwert \\
+    \midrule
+                           50& 3& 2& 2& 2& 2& 2.2 \\
+                          100& 5& 4& 4& 4& 4& 4.2 \\
+                          150& 7& 6& 6& 6& 6& 6.2 \\
+                          200& 9& 8& 8& 8& 8& 8.2 \\
+                    250& 11& 10& 10& 10& 10& 10.2 \\
+                    300& 13& 12& 12& 12& 12& 12.2 \\
+                    350& 15& 14& 14& 15& 14& 14.4 \\
+                    400& 17& 16& 17& 17& 17& 16.8 \\
+                      450& 19& 19& 19& 19& 19& 19 \\
+                    500& 22& 21& 21& 21& 21& 21.2 \\
+                    550& 24& 23& 23& 23& 23& 23.2 \\
+                    600& 26& 25& 25& 25& 25& 25.2&  \\
+                    650& 28& 27& 27& 27& 27& 27.2 \\
+                    700& 30& 29& 29& 29& 29& 29.2 \\
+                    750& 32& 31& 31& 31& 31& 31.2 \\
+                    800& 35& 33& 33& 34& 34& 33.8 \\
+                    850& 37& 36& 37& 36& 36& 36.4 \\
+                    900& 39& 38& 39& 38& 38& 38.4 \\
+                    950& 41& 40& 41& 40& 40& 40.4 \\
+                   1000& 43& 42& 43& 42& 42& 42.4 \\
+    \bottomrule
+    \end{tabular}
+    \label{tab:Brechung}
+\end{table}
+
+\begin{figure}
+    \centering
+    \includegraphics[height = 6cm]{build/luft.pdf}
+    \caption{Messwerte der fünf Messungen zur Bestimmung von $n$.}
+    \label{fig:allefüreinen}
+\end{figure}
+Um aus den Messwerten ein Brechungsindex ermitteln zu können, wird der Durchschnitt der fünf Messungen für den jeweiligen Druck ermittelt und aufgetragen. Die anschließend durchgeführte lineare Regression nach \autoref{eq:nluft2} mit $T=293.75\,\unit{\kelvin}$
+liefert die in blau eingezeichnete Ausgleichsgerade mit einem Wert von $M=0.0780\pm 0.0005$.
+Dieser Plot ist in \autoref{fig:einerfüralle} dargestellt.
+\begin{figure}
+    \centering
+    \includegraphics[height = 6cm]{build/luftavg.pdf}
+    \caption{Durchschnitt der fünf Messungen und lineare Regression.}
+    \label{fig:einerfüralle}
+\end{figure}
