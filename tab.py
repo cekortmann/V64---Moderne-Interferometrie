@@ -12,6 +12,6 @@ from uncertainties.unumpy import uarray                     # Array von Fehler: 
 from uncertainties.unumpy import (nominal_values as noms,   # Wert:             noms(fehlerwert) = x
                                   std_devs as stds)         # Abweichung:       stds(fehlerarray) = errarray
 
-md = pd.read_csv('HelmholtzspuleAus3.csv')
+md = pd.read_csv('Kontrast.csv')
 # md_a = md.iloc[:, [0,1]]
-print(md.to_latex(index = False, column_format= "c c", decimal=',')) 
+print(md.to_latex(index = False, column_format= "c c c c c c c c c c", decimal=',')) 
