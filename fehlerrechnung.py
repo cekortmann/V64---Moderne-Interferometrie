@@ -20,7 +20,7 @@ def n(max):
 def mean(x):
     a=0
     i=0
-    while i<11:
+    while i<10:
         a+=x[i] 
         i+=1
     return a/10   
