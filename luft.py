@@ -63,3 +63,10 @@ plt.ylim(1, 1.0003)
 plt.savefig('build/luftavg.pdf', bbox_inches = "tight")
 
 plt.clf() 
+p=1.013
+def lorentz(T):
+    return p*um/T+1
+
+
+print('T2.6', lorentz(293.75))
+print('Tnorm', lorentz(288.15))

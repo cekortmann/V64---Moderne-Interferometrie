@@ -1,16 +1,51 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-Zunächst wird allgemein auf das Phänomen der Interferenz und Polarisation von Wellen eingegangen.
-Danach wird der grundlegende Aufbau eines Sagnac-Interferometers erklärt.
-Außerdem wird auf den Kontrast und den Brechungsindex eingegangen.
-
 \subsection{Polarisation, Interferenz und Kohärenz}
 \label{sec:polarisation}
-Licht kann als elektromagnetische Welle beschrieben werde. Hierbei kann es zu Interferenzphänomenen kommen, in welchen sich z.B. zwei Lichtstrahlen auslöschen oder deutlich intensiver werden.
-Die destruktive bzw. konstruktive Interferenz tritt nur bei Licht auf, welches kohärent ist und die gleiche Polarisation wie der zweite Strahl aufweist.
-Kohärenz bedeutet die beiden Strahlen die gleiche Frequenz $f_1=f_2$, folglich also die gleiche Frequenz, haben. Unmittelbar hieraus folgt, dass das Licht eine konstante Phasendifferenz $\delta \Phi$ aufweist.
-Das zweite genante Kriterium ist die Polarisation. Wichtig bei dieser ist, dass die beiden Strahlen die gleiche Polarisationsart und Polarisationsrichtung besitzen.
+\subsection{Interferenz und Kohärenz von Licht}
+Licht wird in diesem Versuch als stehende elektromagnetische Welle betrachtet, um Interferenzerscheinungen erklären zu können. Die elektrische Feldstärke ist 
+ebenfalls eine solche Welle und kann über 
+\begin{equation*}
+    \vec{E} = \vec{E}_0\cos{(kx- \omega t+ \delta)}
+\end{equation*}
+beschrieben werden. Die Ausbreitung von Licht wird dabei über die Maxwellschen Gleichungen beschrieben. Außerdem folgt das elektrische Feld 
+$\vec{E}$ dem Prinzip der linearen Superposition.
+Die Intensität berechnet sich durch 
+\begin{equation*}
+    I = \langle E^2\rangle _{\text{T}} \; ,
+\end{equation*}
+wobei $\langle E^2\rangle _{\text{T}}$ nichts anderes als der zeitliche Mittelwert in einem Intervall T ist
+\begin{equation*}
+    \langle f(t) \rangle _{\text{T}} = \frac{1}{T}\int_t^{t+T} f(t')\text{d}t \, .
+\end{equation*}
+Da $E$ aus einer überlagerung von zwei Wellen besteht, wird $E=(E_1+E_2)$ gesetzt, wodurch $E^2= E_1^2+E_2^2+2E_1\, E_2$ folgt.
+Bei einer Überlagerung von zwei Wellen ergibt sich für die Intensität 
+\begin{equation*}
+    I = I_1 +I_2 +I_{12}\; .
+\end{equation*}
+Der Ausdruck $I_{12}$ beschreibt hierbei den Interferenzterm.
+Nimmt man an, dass $I_1=I_2$ gilt, so folgt, dass
+wenn die Bedingung
+\begin{equation*}
+    \delta_2 -\delta_1 = \left(2n+1\right)\pi 
+\end{equation*}
+erfüllt ist, sich die Intensität zu null ergibt und
+bei 
+\begin{equation*}
+    \delta_2 -\delta_1 = \left(2n\right)\pi 
+\end{equation*}
+sich ein Intesitätsmaximum der Stärke $I=4I_1cos^2{\left(\frac{\delta}{2}\right)}$ zeigt.
+
+Bei zwei unabhängigen Lichtquellen, sind die Phasenkonstanten $\delta_1$ und $\delta_2$ statistische Funktionen der Zeit, wodurch es keine 
+Interferenzerscheinung gibt. Dieses Licht ist dann inkohärent. Mithilfe eines LASERs (light amplification by stimulated emission of radiation)
+ist es jedoch möglich kohärentes Licht zu erzeugen, welches ein festes $k$, $\omega$ und $\delta$ besitzt.
+Bei einem Wegunterschied der einzelnen Strecken des Interferometers, der der Kohärenzlänge $l$ oder mehr entspricht, verschwindet jedoch die 
+Interferenzerscheinung. Die Kohärenzlänge berechnet sich über
+\begin{equation*}
+    l = \text{N}\lambda \; .
+\end{equation*}
+Dabei ist N die Anzahl der bei beobachtbaren Intensitätsmaxima. $\tau$ ist die Kohärenzzeit. 
 
 %\begin{figure}
 %    \centering
@@ -19,85 +54,53 @@ Das zweite genante Kriterium ist die Polarisation. Wichtig bei dieser ist, dass 
 %    \label{fig:polarisation1}
 %\end{figure}
 
-\subsection{Das Sagnac-Interferometer} 
-\label{sec:aufbau}
-
-%\begin{figure}[h]
-%    \centering
-    %\includegraphics[width = 0.7 \linewidth]{pictures/aufbau1.pdf}
-%    \caption{Schematischer Aufbau eines Sagnac-Interferometers\cite{v64}.}
-%    \label{fig:aufbau1}
-%\end{figure}
-
-In \autoref{fig:aufbau1} ist der grundlegende Aufbau eines Sagnac-Interferometers schematisch abgebildet.
-Dieser besteht aus insgesamt 6 Spiegeln.
-Dabei sind die Spiegel zur Strahljustierung vorgesehen.
-M2 wird auch genutzt, um die beiden Strahlen voneinander zu trennen.
-Dies geschieht dadurch, dass das Licht aus dem Helium-Neon-Laser so auf den PBSC (Polarizing-Beam-Splitter-Cube) gelenkt wird, 
-dass der Strahl nicht mittig auftrifft.
-Durch diese Verschiebung laufen die Strahlen zwar am Ende wieder (bei justierten Spiegeln) ineinander zusammen, 
-lassen sich jedoch getrennt voneinander manipulieren, beispielsweise durch ein Glasplättchen.
-Nachdem die Strahlen wieder zusammengeführt wurden, 
-werden sie schließlich durch ein um 45° gedrehten PBSC wieder getrennt, polarisiert und auf zwei verschiedene Photodioden gelenkt.
-Dies passiert zu Gunsten der sogenannten Differenzspannungsmethode.
-Bei Anwendung dieser Methode liegt der Vorteil darin, 
-dass hinterher die beiden Signale voneinander abgezogen werden und somit äußere Störfaktoren wie Restlicht im Laborraum systematisch herausgerechnet werden können.
-Unter anderem durch diese Methode ist das Sagnac-Interferometer nicht so störungsempfindlich wie andere Interferometer. 
 
 \subsection{Kontrast} \label{sec:kontrast}
 Als Kontrast (oder Sichtbarkeit) eines Interferometers wird die Beziehung
 \begin{equation} \label{eq:kontrast}
-    K = \frac{I_\text{max} - I_\text{min}}{I_\text{max} + I_\text{min}}
+    V = \frac{I_\text{max} - I_\text{min}}{I_\text{max} + I_\text{min}}
 \end{equation}
-bezeichnet. Offensichtlich gilt also für den Kontrast: $K \in [0,1]$.
-Anschaulich beschreibt $K$ wie klar das Interferenzbild ist, bei einem Kontrast von $0$ wäre beispielsweise kein Interferenzbild messbar.
+bezeichnet. Offensichtlich gilt also für den Kontrast: $V \in [0,1]$.
+Hierbei beschreibt $V$ die Qualität und Deutlichkeit des Interferenzbildes. Hat $V$ den Wert 1, so ist das Minimum nicht sichtbar. Je stärker das Minimum sichtbar ist, desto kleiner wird $V$ bis es den Wert 0 erreicht und keine Interferenz mehr zu erkennen ist.
 
-Für die Intensitätsmaxima/- und minima gilt die Beziehung \cite{v64}
+Für die Intensitätsmaxima/- und minima gilt die Beziehung
 \begin{equation*}
     I_\text{max/min} \propto I_\text{Laser} \left[ 1 \pm 2 \cos(\Phi) \sin (\Phi) \right] \, ,
 \end{equation*}
 aus der sich wiederrum mit \autoref{eq:kontrast} die Gleichung
 \begin{align}\label{eq:kontrast2}
-    K = K(\Phi) &\propto \left|\frac{\left[ 1 + 2 \cos(\Phi) \sin (\Phi) \right] - \left[ 1 - 2 \cos(\Phi) \sin (\Phi) \right]}{\left[ 1 + 2 \cos(\Phi) \sin (\Phi) \right] + \left[ 1 - 2 \cos(\Phi) \sin (\Phi) \right]}\right| \\
+    V = V(\Phi) &\propto \left|\frac{\left[ 1 + 2 \cos(\Phi) \sin (\Phi) \right] - \left[ 1 - 2 \cos(\Phi) \sin (\Phi) \right]}{\left[ 1 + 2 \cos(\Phi) \sin (\Phi) \right] + \left[ 1 - 2 \cos(\Phi) \sin (\Phi) \right]}\right| \\
     &= \left|2 \cos(\Phi) \sin(\Phi) \right| = \left| \sin (2 \Phi) \right|
 \end{align}
-ergibt. Hieraus ist auch sofort ersichtlich, dass der Kontrast bei ungefähr $45°$ am höchsten sein dürfte, wenn alle anderen Einflüsse optimiert sind.
+ergibt. %Hieraus ist auch sofort ersichtlich, dass der Kontrast bei ungefähr $45°$ am höchsten sein dürfte, wenn alle anderen Einflüsse optimiert sind.
 
-\subsection{Brechungsindizes} \label{sec:n}
+\subsection{Brechungsindex} \label{sec:n}
 
-Der Brechungsindex eines Mediums ist eine intrinsische Eigenschaft eines Materials.
-Diese sind auch mit einem Interferometer bestimmbar.
-Es ist bekannt, dass ein Medium mit $n_\text{Medium} > 1$ die Geschwindigkeit von eintretendem Licht verringert.
-Dies lässt sich durch die Gleichung
+Der Brechungsindex ist eine intrinsische Eigenschaft eines Materials und kann mittels Interferometer bestimmt werden. Ein Medium mit einem Brechungsindex $n_\text{Medium} > 1$ reduziert die Geschwindigkeit des einfallenden Lichts, was durch die Gleichung
 \begin{equation*}
     v_\text{Medium} = \frac{c}{n}
 \end{equation*}
-beschreiben. Wird also ein Lichtstrahl durch ein Medium gelenkt, 
-dabei reicht bereits eine geringe Strecke aus, 
-erfährt dieser Lichtstrahl im Gegensatz zu einem anderen Lichtstrahl der selben Quelle eine Phasenverschiebung.
-Dies lässt sich in Interferometern ausnutzen, um den Brechungsindex eines Mediums zu bestimmen.
-Für die Phasenverschiebung in Luft gilt die Beziehung \cite{v64}
+beschrieben wird. Ein Lichtstrahl, der durch ein Medium geleitet wird, erfährt eine Phasenverschiebung. Diese Phasenverschiebung kann in Interferometern genutzt werden, um den Brechungsindex eines Mediums zu bestimmen.
+
+Für die Phasenverschiebung in Luft gilt
 \begin{equation} \label{eq:nluft}
     \Delta \Phi = \frac{2 \pi}{\lambda_\text{vac}} \Delta n \cdot L \, ,
 \end{equation}
-dabei ist L die Länge der durchquerten evakuierten Zelle.
-Wird nun die Beziehung der gezählten Intensitätsmaxima 
+wobei $L$ die Länge der evakuierten Zelle ist. Durch Einsetzen der Beziehung der gezählten Intensitätsmaxima 
 \begin{equation} \label{eq:maxima}
     M = \frac{\Delta \phi}{2 \pi}
 \end{equation}
-in \autoref{eq:nluft} eingesetzt, lässt sich dieser durch die Gleichung
+in \autoref{eq:nluft} lässt sich der Brechungsindex bestimmen:
 \begin{align} \label{eq:nluft2}
     \Delta n &= n_\text{Luft} - n_\text{Vak} = \frac{M \cdot \lambda_\text{vac}}{L} \nonumber \\
     n_\text{Luft} &= \frac{M \cdot \lambda_\text{vac}}{L} + 1
 \end{align}
-bestimmen.
-Nun kann mithilfe des Lorentz-Lorenz Gesetzes der Brechungsindex unter Normalbedingungen berechnet werden.
-Das Lorentz-Lorenz-Gesetz lautet
+
+Mithilfe des Lorentz-Lorenz-Gesetzes lässt sich der Brechungsindex unter Normalbedingungen berechnen. Das Lorentz-Lorenz-Gesetz lautet
 \begin{equation*}
     \frac{n^2 - 1}{n^2 + 2} = \frac{A p}{R T} \, ,
 \end{equation*}
-wobei $A$ die Refraktivität beschreibt und $R$ die allgemeine Gaskonstante.
-Da der Brechungsindex ungefähr bei 1 liegen sollte, lässt sich eine Taylorentwicklung durchführen. Es ergibt sich
+wobei $A$ die Refraktivität beschreibt und $R$ die allgemeine Gaskonstante. Nach einer Taylorentwicklung ergibt sich
 \begin{equation*}
     n(p) \approx \frac{2 (n-1)}{3} \, ,
 \end{equation*} 
@@ -107,13 +110,11 @@ woraus sich dann
 \end{equation}
 ergibt.
 
-In diesem Experiment wird auch durch zwei verkippte Glasplättchen der Brechungsindex von Glas bestimmt.
-Für den Brechungsindex in Glas gilt allgemein \cite{v64}
+In diesem Experiment wird auch der Brechungsindex von Glas bestimmt. Für den Brechungsindex in Glas gilt
 \begin{equation}\label{eq:phiglas}
     \Delta \phi = \frac{2\pi}{\lambda}T\left(\frac{n-1}{2n}\Delta \theta^2+O( \Delta \theta^4)\right) \, .
 \end{equation}
-Diese Gleichung muss zunächst modifiziert werden, da 2 Glasplättchen verbaut sind und dazu um $\Theta_0 = \pm 10°$ verkippt sind.
-Damit wird aus \autoref{eq:phiglas} die Gleichung in führender Ordnung
+Diese Gleichung wird modifiziert, da zwei Glasplättchen verbaut sind und um $\Theta_0 = \pm 10°$ verkippt sind. Damit ergibt sich die Gleichung in führender Ordnung
 \begin{equation}
     \Delta \phi = \frac{\pi \cdot (n - 1) T}{\lambda \cdot n} \left(\left( \theta + 10° \right)^2 - \left( \theta - 10° \right)^2\right) \, ,
 \end{equation}
@@ -126,4 +127,3 @@ und somit auf
     n = \frac{1}{1- \frac{\lambda M}{ 2 \theta \cdot |\theta_0| T}}
 \end{equation}
 führt.
-
