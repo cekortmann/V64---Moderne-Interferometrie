@@ -4,7 +4,10 @@
 \input{fehlerrechnung.tex}
 
 \subsection{Kontrast}
-
+In \autoref{tab:kontrast} werden unsere Messdaten der Minima und Maxima in Abhängigkeit von dem Winkel des Polarisationsfilters dargestellt. 
+Zu jedem Winkel wurden das Maximum und Minimum jeweils dreimal gemessen. Aus diesen wurde dann jeweils der Mittelwert mit \autoref{eqn:Mittelwert}
+berechnet und ebenfalls in \autoref{tab:kontrast} aufgetragen. Die Tabelle enthält außerdem den berechneten Kontrast. Dieser berechnet sich nach 
+\autoref{eqn:kontrast}.
 \begin{sidewaystable}
 \begin{tabular}{c c c c c c c c c c}
     \toprule
@@ -51,13 +54,23 @@
     \end{tabular}
     \label{tab:kontrast}
 \end{sidewaystable}
-
+Der Kontrast wird nun in Abhängigkeit vom Winkel in \autoref{fig:kontrast} dargestellt. Außerdem wurde eine Ausgleichskurve nach 
+\begin{equation*}
+    \lvert a \cdot sin(2\phi -\delta) \rvert
+\end{equation*}
+eingezeichnet. Diese beruht auf der Theoriekurve (\autoref{eqn:kontrast2}).
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{build/kontrast.pdf}
     \caption{Kontrast in Abhängigkeit vom Winkel des Polarisationsfilters.}
     \label{fig:kontrast}
 \end{figure}
+Die Parameter ergeben sich dabei zu 
+\begin{align*}
+    a &= 0.906 \pm 0.021 \, \, ,\\
+    \delta &= 2.9 \pm 0.6 \, \, .\\
+\end{align*}
+Die Maxima des Kontrasts befinden sich bei $K=0.943$ bei $\phi=50\,°$ und bei $K=0.952$ bei $\phi = 135\, °$.
 
 \subsection{Brechungsindex von Glas}
 \label{sec:AuswGlas}
