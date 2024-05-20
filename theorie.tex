@@ -3,13 +3,19 @@
 
 \subsection{Interferenz, Kohärenz und Polarisation}
 \label{sec:polarisation}
-Licht wird in diesem Versuch als stehende linearpolarisierte elektromagnetische Welle betrachtet, um Interferenzerscheinungen erklären zu können. Die elektrische Feldstärke ist 
+Licht wird in diesem Versuch als elektromagnetische Welle betrachtet, um Interferenzerscheinungen erklären zu können. Die elektrische Feldstärke ist 
 ebenfalls eine solche Welle und kann über 
 \begin{equation}
-    \vec{E} = \vec{E}_0\cos{(\omega t+ \delta)}
+    \vec{E} = \vec{E}_0\cos{(\vec{k}\cdot \vec{r}+\omega t+ \delta)}
     \label{eqn:EVektor}
 \end{equation}
-beschrieben werden. Die Ausbreitung von Licht wird dabei über die Maxwellschen Gleichungen beschrieben. Außerdem folgt das elektrische Feld 
+beschrieben werden. Der Vektor $\vec{E}$ beschreibt die Amplitude in die drei Raumrichtungen und $\vec{k}$ ist der Wellenvektor, $\vec{r}$ ist die Ausbreitungsrichtung, $\omega$ steht für die Kreisfrequenz des Lichtes, $t$ stellt die Zeit dar und die Phase wird durch $\delta$ beschrieben. Informationen über Polarisation, auf die später noch eingegangen wird, werden von $\vec{E}$ getragen. Für Licht mit der Ausbreitungsrichtung in $z$-Richtung und linearer Polarisation in $x$-Richtung folgt
+\begin{align*}
+    \vec{r}&= \left(\begin{array}{c}0 \\ 0 \\ z\end{array}\right) \; ,\\
+    \vec{E}&= \left(\begin{array}{c} E_0 \\ 0 \\ 0\end{array}\right)\; .
+\end{align*}
+
+Die Ausbreitung von Licht wird dabei über die Maxwellschen Gleichungen beschrieben. Außerdem folgt das elektrische Feld 
 $\vec{E}$ dem Prinzip der linearen Superposition.
 Die Intensität berechnet sich durch 
 \begin{equation*}
@@ -20,7 +26,7 @@ wobei $\langle E^2\rangle _{\text{T}}$ nichts anderes als der zeitliche Mittelwe
     \langle f(t) \rangle _{\text{T}} = \frac{1}{T}\int_t^{t+T} f(t')\text{d}t \, .
     \label{eqn:zeitlichMittel}
 \end{equation}
-Da $E$ aus einer überlagerung von zwei Wellen besteht, wird $\vec{E}=(\vec{E}_1+\vec{E}_2)$ gesetzt, wodurch $\vec{E}^2= E_1^2+E_2^2+2\vec{E_1}\, \vec{E}_2\cdot\text{cos}(\alpha)$ folgt.
+Da $E$ aus einer Überlagerung von zwei Wellen besteht, wird $\vec{E}=(\vec{E}_1+\vec{E}_2)$ gesetzt, wodurch $\vec{E}^2= E_1^2+E_2^2+2\vec{E_1}\, \vec{E}_2\cdot\text{cos}(\alpha)$ folgt.
 Der Winkel $\alpha$ ist hierbei der Winkelzwischen den beiden Wellen.
 Bei einer Überlagerung von zwei Wellen ergibt sich für die Intensität 
 \begin{equation*}
@@ -81,8 +87,8 @@ Hierbei wurde die Phasenverschiebung $\delta$ als Verschiebung der zweiten zur e
 \begin{equation*}
     I=\frac{1}{T}\int_t^{t+T} (E_{0}\cos{(\omega t)})^2+(E_{0,2}\cos{(\omega t+ \delta)})^2+2E_{0}\cos{(\omega t)}\, E_{0}\cos{(\omega t+ \delta)}\text{d}t\, .
 \end{equation*}
-Nach ausführen des Integrals und kann nach kurzer Umformung
-folgende Beziehung für die Intensitätsmaxima/- und minima gefunden werden
+Nach nach kurzer Umformung kann 
+folgende Proportionalität für die Intensitätsmaxima/- und minima gefunden werden
 \begin{equation*}
     I_\text{max/min} \propto I_\text{Laser} \left[ 1 \pm 2 \cos(\Phi) \sin (\Phi) \right] \, ,
 \end{equation*}
@@ -131,11 +137,11 @@ ergibt. Die Größe $T$ ist hierbei die Temperatur.
 
 In diesem Experiment wird auch der Brechungsindex von Glas bestimmt. Für den Brechungsindex in Glas gilt
 \begin{equation}\label{eq:phiglas}
-    \Delta \delta = \frac{2\pi}{\lambda}T\left(\frac{n-1}{2n}\Delta \theta^2+O( \Delta \theta^4)\right) \, .
+    \Delta \phi = \frac{2\pi}{\lambda}T\left(\frac{n-1}{2n}\Delta \theta^2+O( \Delta \theta^4)\right) \, .
 \end{equation}
 Diese Gleichung wird modifiziert, da zwei Glasplättchen verbaut sind und um $\theta_0 = \pm 0.175\,\text{rad}$ verkippt sind. Damit ergibt sich die Gleichung in führender Ordnung
 \begin{equation}
-    \Delta \delta = \frac{\pi \cdot (n - 1) T}{\lambda \cdot n} \left(\left( \theta + 0.175 \right)^2 - \left( \theta - 0.175 \right)^2\right) \, ,
+    \Delta \phi = \frac{\pi \cdot (n - 1) T}{\lambda \cdot n} \left(\left( \theta + 0.175 \right)^2 - \left( \theta - 0.175 \right)^2\right) \, ,
 \end{equation}
 was mit \autoref{eq:maxima} auf die Gleichung
 \begin{equation*}
