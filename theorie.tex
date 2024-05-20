@@ -43,7 +43,7 @@ bei
 \begin{equation*}
     \delta_2 -\delta_1 = \left(2n\right)\pi 
 \end{equation*}
-sich ein Intesitätsmaximum der Stärke $I=4I_1cos^2{\left(\frac{\delta}{2}\right)}$ zeigt.
+sich ein Intensitätsmaximum der Stärke $I=4I_1cos^2{\left(\frac{\delta}{2}\right)}$ zeigt.
 
 Bei zwei unabhängigen Lichtquellen, sind die Phasenkonstanten $\delta_1$ und $\delta_2$ statistische Funktionen der Zeit, wodurch es keine 
 Interferenzerscheinung gibt. Dieses Licht ist dann inkohärent. Mithilfe eines LASERs (light amplification by stimulated emission of radiation)
@@ -82,10 +82,18 @@ Aus zwei überlagerten Wellen $E=(E_1+E_2)$ folgt nach Einsetzen von \autoref{eq
 \begin{equation*}
     I = \langle E^2\rangle _{\text{T}}= \frac{1}{T}\int_t^{t+T}  (\vec{E}_{0,1}\cos{(\omega t)})^2+(\vec{E}_{0,2}\cos{(\omega t+ \delta)})^2+2\vec{E}_{0,1}\cos{(\omega t)}\, \vec{E}_{0,2}\cos{(\omega t+ \delta)}\cdot\text{cos}(\alpha)\text{d}t\, .
 \end{equation*}
-Hierbei wurde die Phasenverschiebung $\delta$ als Verschiebung der zweiten zur ersten Welle definiert. Unter der Vereinfachung, dass sich die Welle nur entlang einer Achse ausbreitet, der Winkel zwischen den beiden Strahlen $\alpha=0$ ist und beide Wellen die gleiche Intensität haben folgt für die Intensität
-
+Hierbei wurde die Phasenverschiebung $\delta$ als Verschiebung der zweiten zur ersten Welle definiert. Unter der Vereinfachung, dass sich die Welle nur entlang einer Achse ausbreitet, der Winkel zwischen den beiden Strahlen $\alpha=0$ ist und beide Wellen die gleiche Intensität haben folgt für die Intensität 
 \begin{equation*}
     I=\frac{1}{T}\int_t^{t+T} (E_{0}\cos{(\omega t)})^2+(E_{0,2}\cos{(\omega t+ \delta)})^2+2E_{0}\cos{(\omega t)}\, E_{0}\cos{(\omega t+ \delta)}\text{d}t\, .
+\end{equation*}
+Wenn nun noch angenommen wird, dass der Polarisationswinkel $\Phi$ zwischen den beiden linear polarisierten Wellen liegt, folgt
+\begin{align*}
+    I&=\frac{1}{T}\int_t^{t+T} (E_{0}\cos{(\Phi)}\cos{(\omega t)}+E_{0}\sin{(\Phi)}\cos{(\omega t+ \delta)})^2\text{d}t\, ,\\
+    &= \langle (E_{0}\cos{(\Phi)}\cos{(\omega t)}+E_{0}\sin{(\Phi)}\cos{(\omega t+ \delta)})^2\rangle \\
+\end{align*}
+Unter der Betrachtung, dass für konstruktive Interferenz $\delta = 0$ und für destruktive $\delta =\pi$ gilt, folgt
+\begin{equation*}
+    I\propto  \langle E_{0}^2 (\cos{(\Phi)}^2+\sin{(\Phi)}^2\pm 2\cos{(\Phi)}\sin{(\Phi)})\rangle \; .
 \end{equation*}
 Nach nach kurzer Umformung kann 
 folgende Proportionalität für die Intensitätsmaxima/- und minima gefunden werden
@@ -137,12 +145,12 @@ ergibt. Die Größe $T$ ist hierbei die Temperatur.
 
 In diesem Experiment wird auch der Brechungsindex von Glas bestimmt. Für den Brechungsindex in Glas gilt
 \begin{equation}\label{eq:phiglas}
-    \Delta \phi = \frac{2\pi}{\lambda}T\left(\frac{n-1}{2n}\Delta \theta^2+O( \Delta \theta^4)\right) \, .
+    \Delta \phi = \frac{2\pi}{\lambda}D\left(\frac{n-1}{2n}\Delta \theta^2+O( \Delta \theta^4)\right) \, .
 \end{equation}
-Hierbei ist $T$ die Dicke des Glasplättchens.
+Hierbei ist $D$ die Dicke des Glasplättchens.
 Diese Gleichung wird modifiziert, da zwei Glasplättchen verbaut sind und um $\theta_0 = \pm 0.175\,\text{rad}$ verkippt sind. Damit ergibt sich die Gleichung in führender Ordnung
 \begin{equation}
-    \Delta \phi = \frac{\pi \cdot (n - 1) T}{\lambda \cdot n} \left(\left( \theta + 0.175 \right)^2 - \left( \theta - 0.175 \right)^2\right) \, ,
+    \Delta \phi = \frac{\pi \cdot (n - 1) D}{\lambda \cdot n} \left(\left( \theta + 0.175 \right)^2 - \left( \theta - 0.175 \right)^2\right) \, ,
 \end{equation}
 was mit \autoref{eq:maxima} auf die Gleichung
 \begin{equation*}
@@ -150,6 +158,6 @@ was mit \autoref{eq:maxima} auf die Gleichung
 \end{equation*}
 und somit auf
 \begin{equation} \label{eq:n_Glas}
-    n = \frac{1}{1- \frac{\lambda M}{ 2 \theta \cdot |\theta_0| T}}
+    n = \frac{1}{1- \frac{\lambda M}{ 2 \theta \cdot |\theta_0| D}}
 \end{equation}
 führt.
