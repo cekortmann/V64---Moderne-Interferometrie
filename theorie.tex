@@ -89,14 +89,14 @@ Hierbei wurde die Phasenverschiebung $\delta$ als Verschiebung der zweiten zur e
 Wenn nun noch angenommen wird, dass der Polarisationswinkel $\Phi$ zwischen den beiden linear polarisierten Wellen liegt, folgt
 \begin{align*}
     I&=\frac{1}{T}\int_t^{t+T} (E_{0}\cos{(\Phi)}\cos{(\omega t)}+E_{0}\sin{(\Phi)}\cos{(\omega t+ \delta)})^2\text{d}t\, ,\\
-    &= \langle (E_{0}\cos{(\Phi)}\cos{(\omega t)}+E_{0}\sin{(\Phi)}\cos{(\omega t+ \delta)})^2\rangle \\
+    &= I_{\text{Laser}}\langle (\cos{(\Phi)}\cos{(\omega t)}+E_{0}\sin{(\Phi)}\cos{(\omega t+ \delta)})^2\rangle \\
 \end{align*}
 Unter der Betrachtung, dass für konstruktive Interferenz $\delta = 0$ und für destruktive $\delta =\pi$ gilt, folgt
 \begin{equation*}
     I\propto  \langle E_{0}^2 (\cos{(\Phi)}^2+\sin{(\Phi)}^2\pm 2\cos{(\Phi)}\sin{(\Phi)})\rangle \; .
 \end{equation*}
 Nach nach kurzer Umformung kann 
-folgende Proportionalität für die Intensitätsmaxima/- und minima gefunden werden
+folgende Proportionalität für die Intensitätsmaxima und -minima gefunden werden
 \begin{equation*}
     I_\text{max/min} \propto I_\text{Laser} \left[ 1 \pm 2 \cos(\Phi) \sin (\Phi) \right] \, ,
 \end{equation*}
@@ -106,7 +106,6 @@ aus der sich wiederrum mit \autoref{eqn:kontrast} die Gleichung
     &= \left|2 \cos(\Phi) \sin(\Phi) \right| = \left| \sin (2 \Phi) \right|
 \end{align}
 ergibt. %Hieraus ist auch sofort ersichtlich, dass der Kontrast bei ungefähr $45°$ am höchsten sein dürfte, wenn alle anderen Einflüsse optimiert sind.
-Die Größe $\Phi$ ist hierbei der Polarisationswinkel. 
 \subsection{Brechungsindex} \label{sec:n}
 
 Der Brechungsindex ist eine intrinsische Eigenschaft eines Materials und kann mittels Interferometer bestimmt werden. Ein Medium mit einem Brechungsindex $n_\text{Medium} > 1$ reduziert die Geschwindigkeit des einfallenden Lichts, was durch die Gleichung
