@@ -141,7 +141,7 @@ In diesem Teil der Auswertung wird der Brechungsindex von Luft ermittelt. Die Da
     \label{fig:allefüreinen}
 \end{figure}
 Um aus den Messwerten ein Brechungsindex ermitteln zu können, wird der Durchschnitt der fünf Messungen für den jeweiligen Druck ermittelt und aufgetragen. Die anschließend durchgeführte lineare Regression nach \autoref{eq:nluft2} mit $T=293.75\,\unit{\kelvin}$
-liefert die in blau eingezeichnete Ausgleichsgerade mit einem Wert von $M=0.0780\pm 0.0005$.
+liefert die in blau eingezeichnete Ausgleichsgerade mit einem Wert von $m=(0.0780\pm 0.0005)\,\symup{\frac{K}{bar}}$. Dabei ist $m= \frac{3A}{2R}$.
 Dieser Plot ist in \autoref{fig:einerfüralle} dargestellt.
 \begin{figure}
     \centering
@@ -149,9 +149,10 @@ Dieser Plot ist in \autoref{fig:einerfüralle} dargestellt.
     \caption{Durchschnitt der fünf Messungen und lineare Regression.}
     \label{fig:einerfüralle}
 \end{figure}
-Hiermit kann der Brechungsindex Über \autoref{eq:lorentz} ermittelt werden. Hierzu setzen wir die Normalbedingungen von $15\,°\unit{\celsius}$ und $1.013\,\unit{\bar}$ an.
+Hiermit kann der Brechungsindex über \autoref{eq:lorentz} ermittelt werden. Hierzu setzen wir die Normalbedingungen von $15\,\unit{\celsius}$ und $1.013\,\unit{\bar}$ an.
 Der daraus resultierende Brechungsindex wird zu
-\begin{align*}
-    n_{20.6\,°\unit{\celsius}}&=  1.04129\pm 0.00026   \\
-    N_{\text{norm}}&=   1.04209\pm 0.00026      \\
-\end{align*}
+\begin{equation*}
+    n_{\text{norm}}= 1.0002742\pm 0.0000018 
+\end{equation*}
+Dabei beträgt die Gaskonstante $R=8.3145\,\symup{\frac{J}{mol\cdot K}}$ und die Refraktivität $A=(0.4324\pm 0.0028)\,\symup{\frac{J}{bar\cdot mol}}$.
+Die Refraktivität ergibt sich über $m$, das wir aus der Ausgleichsgerade bestimmt haben.

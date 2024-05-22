@@ -25,5 +25,14 @@ def mean(x):
         i+=1
     return a/10   
 
+um = ufloat(0.0780, 0.0005)
+def nLuft():
+    return 1+1.013*um/288.15
+
+def Refr():
+    return 2*um*8.3145/3
+
 print('n der Brechungsindizes',n(A))
 print('Durchschnitt der n', mean(n(A)))
+print('n Luft',nLuft())
+print('A=',Refr())
